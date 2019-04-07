@@ -1,0 +1,16 @@
+#mapid, #imarr{
+    height: 900px;
+    width: 900px; 
+    margin: 5px;
+    position: center;
+    float: left;
+    }
+
+.leaflet-image-layer {
+    display: none;
+    opacity: 0.35;
+}
+
+#my404img {
+    visibility: hidden;
+}

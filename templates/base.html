@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Remap</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <script src="{% static 'scripts/jquery-3.3.1.min.js' %}"></script>
+        {% block scripts %}
+        {% endblock scripts %}
+    </head>
+
+    <div class="header">
+        <table>
+                <tr>
+                    <th width="100%">REMAP</th>                    
+                </tr>
+        </table>
+    </div>
+
+    <body>
+        {% block content %}
+        {% endblock content %}
+    </body>
+
+</html>
+        

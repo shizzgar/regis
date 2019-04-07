@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+
+    
+    <!-- leaflet start -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+    <!-- leaflet end -->
+
+    <!-- map import -->
+    {% load static%}
+    <script type="text/javascript" src="{% static 'scripts/map/map.js' %}"></script>
+    <script type="text/javascript" src="{% static 'scripts/map/getPic.js' %}"></script>
+    <!-- map import -->
+
+{% endblock scripts %}
+
+
+
+
+{% block content %}
+
+    <div id="bodyDiv">
+
+        <div id="mapid"></div>
+        <div id="ajaxPic">
+            <img id="my404img" width=200px />
+        </div>
+
+        <script>
+            
+            window.onload = function(){
+                mapInit(); 
+
+            };
+            console.log('finish')
+
+            
+        </script>
+
+    </div>
+
+{% endblock content %}
