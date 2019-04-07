@@ -1,4 +1,5 @@
 var globOverlay = null; 
+var stopPic = 0;
 
 function getPic(map){
     var imgUrl;
@@ -26,6 +27,10 @@ function getPic(map){
                 });
             }
 
+            if (stopPic == true){
+                return
+            };
+        
             setTimeout(function(){
                 getPic(map);
             }, 1000);

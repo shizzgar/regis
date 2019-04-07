@@ -26,4 +26,6 @@ function mapInit() {
     //     getPic(mymap);
     // })
 
+    return mymap
+
 }

@@ -1,16 +1,28 @@
-#mapid, #imarr{
-    height: 900px;
-    width: 900px; 
+#mapid, #mapCtrl {
+    height: 100%;
+    width: 49%; 
     margin: 5px;
     position: center;
     float: left;
-    }
+}
+
+#mapCtrl .mapCtrl {
+    width: 49%;
+    height: 10%;
+}
 
 .leaflet-image-layer {
     display: none;
     opacity: 0.35;
 }
 
-#my404img {
-    visibility: hidden;
+#mapBox {
+    width: 100%;
+    height: 900px;
 }
+
+#my404img {
+    /* visibility: hidden; */
+    margin: 5px;
+}
+

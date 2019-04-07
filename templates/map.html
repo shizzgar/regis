@@ -27,19 +27,41 @@
 
     <div id="bodyDiv">
 
-        <div id="mapid"></div>
-        <div id="ajaxPic">
-            <img id="my404img" width=200px />
+        <div id="mapBox">
+            <div id="mapid"></div>
+            <div id="mapCtrl">
+                <button id="showLayer" class="mapCtrl">Show layer</button>
+                <button id="hideLayer" class="mapCtrl">Hide Layer</button>
+                <div id="ajaxPic">
+                    <img id="my404img" width=50% height=10%/>
+                </div>
+                <script>
+                    $(document).ready(function() {
+                        $('#showLayer').button();
+                        $('#showLayer').click(function() {
+                            if (stopPic==1) {
+                                stopPic = 0;
+                                getPic(mymap);    
+                            };                            
+                        });
+                        $('#hideLayer').button();
+                        $('#hideLayer').click(function() {
+                            stopPic = 1;
+                            setTimeout(function() {
+                                $('.leaflet-image-layer').hide();    
+                            }, 1000);
+                        });
+                    }); 
+                </script>
+            </div>
         </div>
-
+        
         <script>
-            
+            var mymap;
             window.onload = function(){
-                mapInit(); 
-
+                mymap = mapInit(); 
             };
-            console.log('finish')
-
+            console.log('finish');
             
         </script>
 
